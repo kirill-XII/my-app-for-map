@@ -1,5 +1,6 @@
 import React from 'react'
 import Item from './Item'
+import style from './ItemList.module.css'
 
 const items = [
 	{ id: 1, name: 'apple', price: 1.0 },
@@ -12,7 +13,7 @@ const items = [
 
 const ItemList = () => {
 	return (
-		<div>
+		<div className={style.app}>
 			{items.map(item => (
 				<Item key={item.id} name={item.name} price={item.price} />
 			))}
