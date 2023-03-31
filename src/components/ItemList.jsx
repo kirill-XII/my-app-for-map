@@ -14,9 +14,13 @@ const items = [
 const ItemList = () => {
 	return (
 		<div className={style.app}>
-			{items.map(item => (
-				<Item key={item.id} name={item.name} price={item.price} />
-			))}
+			<ul>
+				{items.map(item => (
+					<li>
+						<Item key={item.id} name={item.name} price={item.price} />
+					</li>
+				))}
+			</ul>
 		</div>
 	)
 }
